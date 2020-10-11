@@ -10,7 +10,7 @@ function AppRouter() {
     return (
        <React.Fragment>
            <BrowserRouter>
-           <AppBar2/>
+          {window.location.href.split('/')[3]!=='login' &&  <AppBar2/>}
                 <Switch>
                     <Route path="/home" component={Home}/>
                     <Route exact path="/categories" component={Categories}/>
