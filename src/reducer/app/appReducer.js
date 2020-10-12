@@ -1,6 +1,7 @@
 import {
     EXAMPLE_1,
-    EXAMPLE_2
+    EXAMPLE_2,
+    API_CALL_DATA
   } from './actionTypes';
   
   const initState = {
@@ -19,6 +20,10 @@ import {
         return Object.assign({}, state, {
           ex: action.payload,
         });
+      case API_CALL_DATA :
+          return Object.assign({}, state, {
+            apiData: action.payload,
+          });
   
       default:
         return state;

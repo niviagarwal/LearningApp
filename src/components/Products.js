@@ -5,25 +5,21 @@ import {useHistory, withRouter} from 'react-router-dom'
 
 import Button from '@material-ui/core/Button';
 
-function Categories() {
+function Products() {
     const appState = useSelector(state => state.appState)
     const dispatch = useDispatch()
     const history =  useHistory()
     const onCategoriesButton = () => {
-      //getApiCall();
-      // const data = {"name" : "react",
-      // "hey" : "kjfhg"};
-      // dispatch(setApiData(data))
-      history.push('/products');
+      history.push('/cart');
   }
 
     return (
        <React.Fragment>
            <Button variant="contained" color="secondary" onClick={onCategoriesButton}>
-             Categories
+           Products
         </Button>
        </React.Fragment>   
     );
   }
   
-  export default Categories;
+  export default Products;
